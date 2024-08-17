@@ -1,0 +1,338 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* تنسيق عام للجسم */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    direction: rtl;
+    text-align: right;
+    scroll-behavior: smooth;
+    padding-top: 70px; /* لتعويض ارتفاع شريط التنقل */
+}
+
+
+/* تنسيق الحاوية */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* تنسيق شريط التنقل */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: rgba(76, 175, 80, 0.9);
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav {
+    display: inline-block;
+    float: left;
+}
+
+nav ul.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul.nav-links li {
+    display: inline-block;
+}
+
+nav ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul.nav-links li a i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+nav ul.nav-links li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul.nav-links li a:hover::after {
+    width: 100%;
+}
+
+nav ul.nav-links li a:hover {
+    color: #f0f0f0;
+}
+
+/* تنسيق الواجهة الرئيسية */
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 500px;
+    color:#4CAF50;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero-content .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* تنسيق قسم "عن الدكتورة" */
+#about {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4CAF50; /* إطار حول الصورة */
+}
+
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-info h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #4CAF50;
+}
+
+.profile-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* تنسيق قسم "الخدمات" */
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* تنسيق قسم "آراء المرضى" */
+.testimonials {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.testimonial-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.testimonial-item h4 {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+/* تنسيق قسم "تواصل معنا" */
+.contact {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 700px){
+    .container{
+        text-align: center;
+    }
+
+    .container h1{
+        font-size: 18px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul.nav-links {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul.nav-links li {
+        text-align: center;
+        margin: 10px;
+        padding: 0;
+    }
+
+    nav ul.nav-links li a {/*الخط*/
+        display: block;
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul.nav-links li a i {/*الصور*/
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .profile-info h3{
+        font-size: 20px;
+    }
+
+    .profile-info p{
+        font-size: 13px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+    .services .service-items {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .testimonials .testimonial-items {
+        flex-direction: column;
+        font-size: 15px;
+    }
+}
